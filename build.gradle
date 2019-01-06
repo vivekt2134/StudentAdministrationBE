@@ -1,0 +1,37 @@
+plugins {
+    id 'io.spring.dependency-management' version '1.0.6.RELEASE'
+    id 'net.ltgt.apt' version '0.19'
+}
+
+allprojects {
+    group = 'org.sas'
+    version = '1.0'
+
+    apply plugin : 'idea'
+}
+
+subprojects {
+    apply plugin : 'java'
+    apply plugin : 'net.ltgt.apt'
+    apply plugin : 'io.spring.dependency-management'
+    
+    
+
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+
+    dependencies {
+        // Lombok Configuration
+        compileOnly 'org.projectlombok:lombok:1.18.4'
+        annotationProcessor 'org.projectlombok:lombok:1.18.4'
+        
+        // MapStruct Configuration
+        compileOnly 'org.mapstruct:mapstruct-jdk8:1.2.0.Final'
+        annotationProcessor 'org.mapstruct:mapstruct-processor:1.2.0.Final'
+
+        testImplementation "junit:junit:4.12"
+    }
+
+}
