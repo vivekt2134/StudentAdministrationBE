@@ -1,0 +1,3 @@
+rootProject.name = 'StudentAdministrationBE'
+include 'impl', 'common:api', 'common:shared'
+
