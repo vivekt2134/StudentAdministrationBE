@@ -1,4 +1,4 @@
-package org.sas.service;
+package org.sas.service.admin;
 
 import org.sas.mapper.ClassroomMapper;
 import org.sas.repository.ClassroomRepository;

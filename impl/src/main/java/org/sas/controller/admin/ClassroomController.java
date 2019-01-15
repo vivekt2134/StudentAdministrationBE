@@ -1,6 +1,6 @@
-package org.sas.controller;
+package org.sas.controller.admin;
 
-import org.sas.service.ClassroomService;
+import org.sas.service.admin.ClassroomService;
 import lombok.RequiredArgsConstructor;
 import org.sas.Classroom;
 import org.springframework.web.bind.annotation.PostMapping;
