@@ -14,8 +14,6 @@ subprojects {
     apply plugin : 'java'
     apply plugin : 'net.ltgt.apt'
     apply plugin : 'io.spring.dependency-management'
-    
-    
 
     repositories {
         jcenter()
