@@ -1,0 +1,13 @@
+sourceCompatibility = 1.8
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-batch'
+    implementation 'ar.com.fdvs:DynamicJasper:5.0.7'
+
+    // Added dependency for jasper report
+    implementation 'com.lowagie:itext:2.1.7'
+
+    implementation project(':module:bloomer-common')
+    testImplementation 'com.h2database:h2:1.4.197'
+    testImplementation project (path: ":module:bloomer-common", configuration: 'testArtifacts')
+}

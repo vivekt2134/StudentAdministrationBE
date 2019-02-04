@@ -1,0 +1,53 @@
+{
+  "title": "Classroom Report",
+  "subtitle": "Classroom Report for Class-I",
+  "printBackgroundOnOddRows": true,
+  "useFullPageWidth": true,
+  "columns": [
+    {
+      "name": "uuid",
+      "displayValue": "Id",
+      "columnProperty": {
+        "property" : "uuid",
+        "valueClassName": "java.lang.String"
+      },
+      "width": 20
+    },
+    {
+      "name": "name",
+      "displayValue": "Name",
+      "columnProperty": {
+        "property" : "name",
+        "valueClassName": "java.lang.Integer"
+      },
+      "width": 20
+    },
+    {
+      "name": "section",
+      "displayValue": "Section",
+      "columnProperty": {
+        "property" : "section",
+        "valueClassName": "java.lang.String"
+      },
+      "width": 20
+    },
+    {
+      "name": "year",
+      "displayValue": "Year",
+      "columnProperty": {
+        "property" : "year",
+        "valueClassName": "java.lang.Integer"
+      },
+      "width": 4
+    },
+    {
+      "name": "remark",
+      "displayValue": "Remark",
+      "columnProperty": {
+        "property" : "remark",
+        "valueClassName": "java.lang.String"
+      },
+      "width": 120
+    }
+  ]
+}

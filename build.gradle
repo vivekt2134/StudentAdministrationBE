@@ -16,8 +16,8 @@ subprojects {
     apply plugin : 'io.spring.dependency-management'
 
     repositories {
-        jcenter()
         mavenCentral()
+        jcenter()
     }
 
     dependencies {
@@ -26,10 +26,10 @@ subprojects {
         annotationProcessor 'org.projectlombok:lombok:1.18.4'
         
         // MapStruct Configuration
-        compileOnly 'org.mapstruct:mapstruct-jdk8:1.2.0.Final'
-        annotationProcessor 'org.mapstruct:mapstruct-processor:1.2.0.Final'
-
-        testImplementation "junit:junit:4.12"
+        implementation 'org.mapstruct:mapstruct-jdk8:1.3.0.Beta1'
+        annotationProcessor 'org.mapstruct:mapstruct-processor:1.3.0.Beta1'
+        
+        testCompileOnly 'org.projectlombok:lombok:1.18.4'
     }
 
 }
