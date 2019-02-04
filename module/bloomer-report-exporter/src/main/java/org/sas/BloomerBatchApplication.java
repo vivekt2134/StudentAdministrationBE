@@ -13,6 +13,6 @@ public class BloomerBatchApplication {
 
   public static void main(String[] args) {
     SpringApplicationBuilder bloomerBuilder = new SpringApplicationBuilder(BloomerBatchApplication.class);
-    bloomerBuilder.headless(false).run();
+    bloomerBuilder.run();
   }
 }
