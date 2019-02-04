@@ -1,0 +1,50 @@
+subprojects {
+    apply plugin : 'java'
+    apply plugin : 'net.ltgt.apt'
+    apply plugin : 'io.spring.dependency-management'
+
+    dependencyManagement {
+        imports {
+            mavenBom 'org.springframework.boot:spring-boot-starter-parent:2.1.1.RELEASE'
+        }
+    }
+
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    
+
+    dependencies {
+        implementation 'mysql:mysql-connector-java:8.0.13'
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+        implementation 'org.flywaydb:flyway-core'
+        implementation 'commons-io:commons-io:2.6'
+
+        testImplementation('org.springframework.boot:spring-boot-starter-test')
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.2.0'
+        testCompile 'org.junit.jupiter:junit-jupiter-params:5.2.0'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.2.0'
+
+        implementation project(':dto')
+    }
+    
+    // Below configuration is added to make jar file available to other test sub-projects
+    configurations {
+        implementation {
+            exclude group : 'junit', module: 'junit'
+        }
+        testArtifacts
+    }
+
+    task testJar (type: Jar) {
+        baseName = "${project.name}-test"
+        from sourceSets.test.output
+    }
+
+    artifacts {
+        testArtifacts testJar
+    }
+
+}
